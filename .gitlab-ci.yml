@@ -13,8 +13,6 @@ build:
 # Build ethercat tool subcommand help output for documentation
 commands:
     stage: build
-    rules:
-        - if: $CI_COMMIT_BRANCH == "stable-1.5"
     script:
         - ./bootstrap
         - ./configure --disable-kernel --disable-userlib
@@ -43,32 +41,31 @@ test cmake:
 
 doxygen:
     stage: deploy
-    rules:
-        - if: $CI_COMMIT_BRANCH == "stable-1.5"
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
     script:
         - ./bootstrap
         - ./configure --with-linux-dir=/usr/src/linux-obj/$(uname -i)/default --disable-8139too --enable-tty --with-devices=2 --enable-ccat
         - doxygen
-        - mv doxygen-output/html/ html/
+        - mkdir -p public $CI_COMMIT_BRANCH
+        - mv doxygen-output/html/ public/$CI_COMMIT_BRANCH/doxygen/
     artifacts:
         paths:
-            - html/
+            - public/
 
-documentation:
+pdf:
     stage: deploy
-    rules:
-        - if: $CI_COMMIT_BRANCH == "stable-1.5"
     image: registry.gitlab.com/etherlab.org/build-container-factory/leap-15.3:texlive
     script:
         - cd documentation
         - make
         - make index
         - make
+        - mkdir -p ../public/$CI_COMMIT_BRANCH
+        - mv *.pdf ../public/$CI_COMMIT_BRANCH
     artifacts:
         paths:
-            - documentation/*.pdf
+            - public/
 
 # from 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml', but on all branches
 workflow:
