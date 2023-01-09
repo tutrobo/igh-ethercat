@@ -39,6 +39,9 @@ test cmake:
         - make
         - ldd userexample
 
+# This job is collected by the EtherLab Documentation project.
+# It must be named 'doxygen' and must produce an artifact with a 'html'
+# directory dyrectly containing the doxygen index HTML.
 doxygen:
     stage: deploy
     variables:
@@ -47,12 +50,14 @@ doxygen:
         - ./bootstrap
         - ./configure --with-linux-dir=/usr/src/linux-obj/$(uname -i)/default --disable-8139too --enable-tty --with-devices=2 --enable-ccat
         - doxygen
-        - mkdir -p public $CI_COMMIT_BRANCH
-        - mv doxygen-output/html/ public/$CI_COMMIT_BRANCH/doxygen/
+        - mv doxygen-output/html/ html/
     artifacts:
         paths:
-            - public/
+            - html/
 
+# This job is collected by the EtherLab Documentation project.
+# It must be named 'pdf' and must produce a 'pdf' directory as an artifact.
+# All PDF files in this directory will be collected.
 pdf:
     stage: deploy
     image: registry.gitlab.com/etherlab.org/build-container-factory/leap-15.3:texlive
@@ -61,11 +66,11 @@ pdf:
         - make
         - make index
         - make
-        - mkdir -p ../public/$CI_COMMIT_BRANCH
-        - mv *.pdf ../public/$CI_COMMIT_BRANCH
+        - mkdir ../pdf
+        - mv *.pdf ../pdf
     artifacts:
         paths:
-            - public/
+            - pdf/
 
 # from 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml', but on all branches
 workflow:
