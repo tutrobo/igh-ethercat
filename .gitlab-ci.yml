@@ -41,7 +41,7 @@ test cmake:
 
 # This job is collected by the EtherLab Documentation project.
 # It must be named 'doxygen' and must produce an artifact with a 'html'
-# directory dyrectly containing the doxygen index HTML.
+# directory directly containing the doxygen index HTML.
 doxygen:
     stage: deploy
     variables:
