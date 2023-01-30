@@ -3,12 +3,12 @@ This is the README file of the IgH EtherCAT Master.
 vim: spelllang=en spell tw=78
 
 Contents:
-- general-information
-- requirements
-- building-and-installing
-- realtime-and-tuning
-- license
-- coding-style
+- (#general-information)
+- (#requirements)
+- (#building-and-installing)
+- (#realtime-and-tuning)
+- (#license)
+- (#coding-style)
 
 # General Information
 
@@ -19,11 +19,13 @@ information, see http://etherlab.org/en/ethercat.
 
 or contact
 
-> Dipl.-Ing. (FH) Florian Pose <fp@igh.de>
-> Ingenieurgemeinschaft IgH
-> Nordsternstraße 66
-> D-45329 Essen
-> http://igh.de
+>>>
+Dipl.-Ing. (FH) Florian Pose <fp@igh.de>  
+Ingenieurgemeinschaft IgH  
+Nordsternstraße 66  
+D-45329 Essen  
+http://igh.de
+>>>
 
 # Documentation
 
@@ -108,4 +110,4 @@ property and similar rights of Beckhoff Automation GmbH.
 # Coding Style
 
 Developers shall use the coding style rules in the [coding style
-file](CodingStyle.txt).
+file](CodingStyle.md).
