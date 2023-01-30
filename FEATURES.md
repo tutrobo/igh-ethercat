@@ -21,7 +21,7 @@ vim: spelllang=en spell
 
 - Supports any realtime environment through independent architecture.
   - RTAI, Xenomai, RT-Preempt, etc.
-  - RTDM Interface for userspace realtime enviroments
+  - RTDM Interface for userspace realtime environments
   - Operation possible without any realtime extension at all.
 
 - Common API for Realtime-Applications in kernel- and userspace.
@@ -66,7 +66,7 @@ vim: spelllang=en spell
   - Loading and storing files via the command-line tool.
   - Updating a slave's firmware can be done easily.
 
-- Userspace command-line tool 'ethercat'.
+- Userspace command-line tool `ethercat`.
   - Detailed information about master, slaves, domains and bus configuration.
   - Setting the master's debug level.
   - Reading/Writing alias addresses.

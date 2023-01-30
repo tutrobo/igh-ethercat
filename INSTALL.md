@@ -6,7 +6,7 @@ vim: set spelllang=en spell tw=78
 
 The complete build and installation procedure is described in the respective
 section of the
-[https://gitlab.com/etherlab.org/ethercat/-/jobs/artifacts/stable-1.5/raw/pdf/ethercat_doc.pdf?job=pdf](documentation).
+[documentation](https://gitlab.com/etherlab.org/ethercat/-/jobs/artifacts/stable-1.5/raw/pdf/ethercat_doc.pdf?job=pdf).
 
 ---
 
@@ -50,7 +50,8 @@ Now you can start the EtherCAT master:
 /etc/init.d/ethercat start
 ```
 
-Have a look at the examples/ subdirectory for some application examples.
+Have a look at the [examples subdirectory](examples/) for some application
+examples.
 
 ---
 
