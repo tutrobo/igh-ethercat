@@ -1,5 +1,5 @@
-ethercat (1.5.2-1) UNRELEASED; urgency=medium
+ethercat (1.5.2-1) jammy; urgency=medium
 
   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 
- -- Rin Iwai <rin@eyrin.jp>  Fri, 18 Aug 2023 20:16:08 +0900
+ -- Rin Iwai <rin@eyrin.jp>  Fri, 18 Aug 2023 20:18:20 +0900
