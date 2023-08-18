@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Rin Iwai <rin@eyrin.jp>
 Rules-Requires-Root: no
 Build-Depends:
- debhelper-compat (= 13), dh-sequence-dkms, pkg-config
+ debhelper-compat (= 13), dh-sequence-dkms, pkg-config, systemd
 Standards-Version: 4.6.2
 Homepage: https://etherlab.org/en/ethercat/
 Vcs-Browser: https://github.com/eyr1n/ethercat
