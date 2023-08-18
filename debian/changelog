@@ -1,3 +1,9 @@
+ethercat (1.5.2-2) jammy; urgency=medium
+
+  * add systemd
+
+ -- Rin Iwai <rin@eyrin.jp>  Fri, 18 Aug 2023 21:11:43 +0900
+
 ethercat (1.5.2-1) jammy; urgency=medium
 
   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
